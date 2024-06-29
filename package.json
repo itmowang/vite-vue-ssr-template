@@ -1,0 +1,29 @@
+{
+  "name": "ssr-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev":"tsx server",
+    "build": "pnpm build:client && pnpm build:server",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "fs": "0.0.1-security",
+    "tsx": "^4.16.0",
+    "vite": "^5.3.2"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.19.2",
+    "sirv": "^2.0.4",
+    "vue": "^3.4.31"
+  }
+}
